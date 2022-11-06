@@ -1,0 +1,99 @@
+
+
+/*основной текст*/
+body {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+    color: var(--color-text);
+    background: var(--color-button-text);
+}
+
+:root {
+    /*цвет кнопок, hover и focus элементов*/
+    --color-for-hovered: #2196f3;
+    /*цвет заголовков*/
+    --color-for-title: #212121;
+    /*цвет текста и кнопок*/
+    --color-button-text: #ffffff;
+    --color-text: #757575;
+    /*цвет studio*/
+    --color-studio: #000000;
+    /*цвет footer*/
+    --color-footer: #2f303a;
+    /*background карточки*/
+    --color-background-cart: #ffffff;
+    /*background наша команда*/
+    --color-background: #f5f4fa;
+    /*background hero*/
+    --color-background-hero: #c4c4c4;
+    /*соц. сети фон*/
+    --color-fill: #afb1b8;
+    /* распределение времени */
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*заголовки*/
+h1 {
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: var(--color-button-text);
+
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+    }
+}
+
+h2 {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+
+    color: var(--color-for-title);
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    margin-bottom: 10px;
+
+    color: var(--color-for-title);
+}
+
+/*фамилии*/
+.skill-list__team h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+
+    color: var(--color-for-title);
+}
+
+/*профессии*/
+.skill-list__team {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+}
+
+.form-label-text {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--color-text);
+}

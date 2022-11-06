@@ -1,0 +1,87 @@
+.skill-list__team {
+    display: inline-block;
+
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 480px) {
+        width: calc((100% - (15px * 1 * 2))/1);
+    }
+
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - (15px * 2 * 2))/2);
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        width: calc((1200px - (15px * 4 * 2))/4);
+    }
+}
+
+/* .work {
+  width: 370px;
+} */
+
+.comand-background {
+    background: var(--color-background);
+}
+
+/*бордер под карточками*/
+.border-class {
+    border-top: none;
+
+    border: 1px solid var(--color-border);
+}
+
+/* карточки */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.skill-list__teams {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: var(--color-background-cart);
+}
+
+.skill-list__teams p {
+    margin-bottom: 16px;
+}
+
+/* социальные ссылки */
+.skill-list__social-link {
+    display: flex;
+    justify-content: center;
+}
+
+.skill-list__social-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    color: var(--color-fill);
+
+    transition-property: background-color, color;
+    @extend %animation;
+    &:hover,
+    &:focus {
+        color: var(--color-button-text);
+        background-color: var(--color-for-hovered);
+    }
+}
+
+.skill-list__social-link svg {
+    fill: currentColor;
+}
+
+.skill-list__social-link li:not(:last-child) a {
+    margin-right: 10px;
+}
+

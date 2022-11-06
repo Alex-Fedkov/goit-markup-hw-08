@@ -1,0 +1,44 @@
+/*основной текст*/
+body {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+
+    color: var(--color-text);
+    background: var(--color-button-text);
+}
+
+:root {
+    /*цвет кнопок, hover и focus элементов*/
+    --color-for-hovered: #2196f3;
+    /*цвет заголовков*/
+    --color-for-title: #212121;
+    /*цвет текста и кнопок*/
+    --color-button-text: #ffffff;
+    --color-text: #757575;
+    /*цвет studio*/
+    --color-studio: #000000;
+    /*цвет footer*/
+    --color-footer: #2f303a;
+    /*background карточки*/
+    --color-background-cart: #ffffff;
+    /*background фильтр*/
+    --color-background: #f5f4fa;
+    /*цвет рамок*/
+    --color-border: #eeeeee;
+    /* фон выезжающей рамки */
+    --color-background-hover: rgba(33, 150, 243, 0.9);
+    /* распределение времени */
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*заголовки*/
+h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: var(--color-for-title);
+}

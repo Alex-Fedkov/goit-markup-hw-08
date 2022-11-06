@@ -1,0 +1,91 @@
+/* карточки */
+.skill-list {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.skills-item {
+    display: inline-block;
+    width: 370px;
+}
+
+/*проект текст*/
+p {
+    line-height: 1.87;
+
+    color: var(--color-text);
+}
+
+.skills-item a {
+    display: block;
+
+    transition-property: box-shadow;
+    @extend %animation;
+    &:hover,
+    &:focus {
+        box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    }
+    &:hover .hover-text,
+    &:focus .hover-text {
+        transform: translateY(0);
+    }
+}
+
+/*убираем margin в 3-х последних картах*/
+.skill-list li:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+}
+
+/*название проектов*/
+.titles {
+    padding-bottom: 4px;
+}
+
+/*бордер под карточками*/
+.border-class {
+    padding: 20px 24px;
+
+    border: 1px solid var(--color-border);
+    border-top: none;
+}
+
+/* выезжающий hover */
+.image-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-text {
+    position: absolute;
+
+    display: flex;
+    padding: 63px 24px;
+    margin: 0px;
+
+    align-items: center;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+
+    font-size: 18px;
+    line-height: 1.56em;
+    letter-spacing: 0.03em;
+    pointer-events: none;
+
+    color: var(--color-button-text);
+    background: var(--color-background-hover);
+
+    transform: translateY(100%);
+
+    transition-property: transform;
+    @extend %animation;
+}
+

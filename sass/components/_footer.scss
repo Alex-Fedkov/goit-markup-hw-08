@@ -1,0 +1,229 @@
+/* футер */
+.footer {
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+     
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        text-align: left;
+    }
+}
+
+footer {
+    padding: 60px 0;
+
+    background: var(--color-footer);
+}
+
+.logo-adress {
+    width: 231px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        margin: 0;
+        margin-left: 76px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin: 0;
+    }
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.adress {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+
+    color: var(--color-button-text);
+
+    transition-property: color;
+    @extend %animation;
+}
+
+.footer-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    transition-property: color;
+    @extend %animation;
+}
+
+.studio-footer {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+
+    color: var(--color-button-text);
+}
+
+.footer-adress li:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+/* социальные ссылки */
+.fotter-social {
+    margin-bottom: 60px;
+    margin-top: 60px;
+
+    @media screen and (min-width: 768px) {
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin: 0 0 0 70px;
+    }
+    
+}
+
+.social-link-footer {
+    display: flex;
+    fill: var(--color-button-text);
+    justify-content: center;
+
+    @media screen and (min-width: 1200px) {
+        justify-content: space-around;
+    }
+
+}
+
+.social-link-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+    fill: var(--color-for-btn-caption);
+
+    transition-property: background-color;
+    @extend %animation;
+    &:hover,
+    &:focus {
+        background-color: var(--color-for-hovered);
+    }
+}
+
+.fotter-social b,
+.email-input b {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.14em;
+    text-transform: uppercase;
+
+    color: var(--color-button-text);
+}
+
+.social-link-footer li:not(:last-child) a {
+    margin-right: 10px;
+}
+
+/* кнопка подписаться */
+.input-email {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 15px 16px;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 20px;
+    
+    font-size: 16px;
+    color: var(--color-button-text);
+
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    @media screen and (min-width: 1200px) {
+        display: inline-flex;
+        justify-content: space-around;
+        margin-right: 12px;
+        margin-bottom: 0;
+        width: 358px;
+    }
+}
+
+.input-email::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.email-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    @media screen and (min-width: 768px) {
+        margin-top: 60px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+        margin-left: auto;
+        margin-top: 0;
+    }
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    min-width: 200px;
+    border: none;
+    padding: 10px 28px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    color: var(--color-button-text);
+    background-color: var(--color-for-hovered);
+    fill: var(--color-button-text);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition-property: background-color, color, fill;
+    @extend %animation;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    
+        color: var(--color-for-hovered);
+        background-color: var(--color-button-text);
+        fill: var(--color-for-hovered);
+    }
+}
+
+.button-icon {
+    margin-left: 10px;
+}

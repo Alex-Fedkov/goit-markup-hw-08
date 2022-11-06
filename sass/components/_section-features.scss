@@ -1,0 +1,75 @@
+/* иконки на Наші особливості */
+.skill-list__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--color-background);
+}
+
+.skill-list__item {
+
+    @media screen and (min-width: 768px) {
+        width: calc((768px - (15px * 2 * 2))/2);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: calc((1200px - (15px * 4 * 2))/4);
+    }
+
+    // width: 270px;
+    /* margin-left: 30px; */
+}
+
+.skill-list {
+    gap: 30px;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+}
+
+.skill-list div {
+    position: relative;
+}
+
+.skill-list__work {
+    display: inline-block;
+    width: 370px;
+}
+
+.skill-list__work h3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 27px;
+    padding-bottom: 27px; */
+    margin-bottom: 0;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--color-button-text);
+    background: rgba(47, 48, 58, 0.8);
+}
+
+p {
+    line-height: 1.71;
+}

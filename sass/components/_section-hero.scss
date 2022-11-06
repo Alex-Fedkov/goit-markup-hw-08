@@ -1,0 +1,71 @@
+/* эффект */
+.hero {
+    height: 400px;
+    text-align: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    // max-width: 1600px;
+    margin: 0 auto;
+
+    background-color: var(--color-background-hero);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    //         url(../images/hero-background.jpg);
+
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-480.jpg);
+    max-width: 480px;
+
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-768.jpg);
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-1200.jpg);
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        max-width: 1600px;
+    }
+}
+
+/*кнопка*/
+.hero-but {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+    border: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    color: var(--color-button-text);
+    background: var(--color-for-hovered);
+
+    transition-property: background, color;
+    @extend %animation;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+
+        color: var(--color-for-hovered);
+        background: var(--color-button-text);
+    }
+
+    @media screen and (min-width: 1200px) {
+        min-width: 216px;
+    }
+}
+

@@ -1,0 +1,39 @@
+/*расстоновка фильтра*/
+.ul-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ul-button li:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 50px;
+}
+
+.button-filtr {
+    display: inline-block;
+    padding: 6px 22px;
+    min-width: 73px;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+
+    border: none;
+    border-radius: 4px;
+
+    background: var(--color-background);
+    color: var(--color-for-title);
+
+    transition-property: background, color;
+    @extend %animation;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: var(--color-button-text);
+        background: var(--color-for-hovered);
+        box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    }
+}
