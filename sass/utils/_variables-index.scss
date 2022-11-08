@@ -18,6 +18,7 @@ body {
     --color-for-title: #212121;
     /*цвет текста и кнопок*/
     --color-button-text: #ffffff;
+    --color-background-button: #188ce8;
     --color-text: #757575;
     /*цвет studio*/
     --color-studio: #000000;
@@ -55,14 +56,22 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+        text-align: center;
+    
+        color: var(--color-for-title);
+    
+    
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
 
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-
-    color: var(--color-for-title);
+        font-size: 36px;
+        line-height: 1.16;
+    }
 }
 
 h3 {

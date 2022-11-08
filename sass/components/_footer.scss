@@ -25,16 +25,15 @@ footer {
 }
 
 .logo-adress {
-    width: 231px;
-    margin: 0 auto;
+    // width: 231px;
+    // margin: 0 auto;
+    margin-bottom: 60px;
+    width: 100%;
 
     @media screen and (min-width: 768px) {
-        margin: 0;
-        margin-left: 76px;
-    }
+        margin-bottom: 0px;
 
-    @media screen and (min-width: 1200px) {
-        margin: 0;
+        width: 231px;
     }
 }
 
@@ -79,20 +78,53 @@ footer {
     margin-bottom: 9px;
 }
 
-/* социальные ссылки */
-.fotter-social {
+.adress-social {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 60px;
-    margin-top: 60px;
+    justify-content: center;
 
     @media screen and (min-width: 768px) {
-        margin: 0 auto;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+        // padding: 0 55px;
+        width: 100%;
     }
 
     @media screen and (min-width: 1200px) {
-        margin: 0 0 0 70px;
+        margin-bottom: 0px;
+        padding: 0;
+        width: 506px;
     }
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .social-link-footer {
     display: flex;
@@ -102,7 +134,6 @@ footer {
     @media screen and (min-width: 1200px) {
         justify-content: space-around;
     }
-
 }
 
 .social-link-footer a {
@@ -177,10 +208,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    @media screen and (min-width: 768px) {
-        margin-top: 60px;
-    }
 
     @media screen and (max-width: 1199px) {
         width: 100%;

@@ -35,7 +35,6 @@ a {
 }
 
 .container {
-  width: 1230px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -46,7 +45,7 @@ a {
   padding-bottom: 94px;
 }
 
-.button, .social-link-footer a, .footer-link, .adress, .hover-text, .skills-item a, .button-filtr, .head__container.is-open .header-menu-button, .header-menu-button, .nav__link::after, .nav__link,
+.button, .social-link-footer a, .footer-link, .adress, .hover-text, .skills-item a, .button-filtr, .mob-menu-mal, .mob-menu-tel, .head__container.is-open .header-menu-button, .header-menu-button, .nav__link::after, .nav__link,
 .connection__mail-and-tel {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -98,6 +97,10 @@ h2 {
 }
 
 /*расстановка навигации*/
+header {
+  border-bottom: 1px solid #ececec;
+}
+
 .head__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,8 +153,21 @@ h2 {
   padding-bottom: 32px;
 }
 
+.nav__studio {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .connection {
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .connection .mail {
+    padding: 0px;
+  }
+  .connection .telefon {
+    padding: 0px;
+  }
 }
 @media screen and (min-width: 768px) {
   .connection {
@@ -165,12 +181,24 @@ h2 {
     margin-left: auto;
   }
 }
+@media screen and (max-width: 1199px) {
+  .connection .mail {
+    padding-top: 20px;
+  }
+  .connection .telefon {
+    padding-bottom: 20px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .connection {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .connection a {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -236,7 +264,7 @@ h2 {
   margin-right: 10px;
 }
 
-.nav__link .current {
+.nav__link.current {
   color: var(--color-for-hovered);
 }
 
@@ -324,7 +352,6 @@ h2 {
 }
 
 .head__container.is-open {
-  position: absolute;
   padding: 48px 40px;
   top: 0;
   -webkit-box-align: start;
@@ -334,12 +361,16 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: auto;
   height: 100%;
   width: 100%;
-  min-width: 480px;
-  max-width: 767px;
+  position: fixed;
   background-color: var(--color-button-text);
   z-index: 10;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--transition-timing);
+          transition-timing-function: var(--transition-timing);
 }
 .head__container.is-open .nav__studio {
   display: none;
@@ -379,6 +410,10 @@ h2 {
     color: var(--color-for-title);
     -webkit-transition-property: color;
     transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: var(--transition-timing);
+            transition-timing-function: var(--transition-timing);
   }
   .head__container.is-open .nav__menu a:hover, .head__container.is-open .nav__menu a:focus {
     color: var(--color-for-hovered);
@@ -404,6 +439,8 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -435,6 +472,10 @@ h2 {
     margin-bottom: 32px;
     -webkit-transition-property: color;
     transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: var(--transition-timing);
+            transition-timing-function: var(--transition-timing);
   }
   .mob-menu-tel:hover, .mob-menu-tel:focus {
     color: var(--color-for-hovered);
@@ -451,6 +492,10 @@ h2 {
     margin-bottom: 64px;
     -webkit-transition-property: color;
     transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: var(--transition-timing);
+            transition-timing-function: var(--transition-timing);
   }
   .mob-menu-mal:hover, .mob-menu-mal:focus {
     color: var(--color-for-hovered);
@@ -466,6 +511,8 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -638,18 +685,13 @@ footer {
 }
 
 .logo-adress {
-  width: 231px;
-  margin: 0 auto;
+  margin-bottom: 60px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .logo-adress {
-    margin: 0;
-    margin-left: 76px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .logo-adress {
-    margin: 0;
+    margin-bottom: 0px;
+    width: 231px;
   }
 }
 
@@ -689,19 +731,38 @@ footer {
   margin-bottom: 9px;
 }
 
-/* социальные ссылки */
-.fotter-social {
+.adress-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 60px;
-  margin-top: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 768px) {
-  .fotter-social {
-    margin: 0 auto;
+  .adress-social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .fotter-social {
-    margin: 0 0 0 70px;
+  .adress-social {
+    margin-bottom: 0px;
+    padding: 0;
+    width: 506px;
   }
 }
 
@@ -824,11 +885,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .email-input {
-    margin-top: 60px;
-  }
 }
 @media screen and (max-width: 1199px) {
   .email-input {

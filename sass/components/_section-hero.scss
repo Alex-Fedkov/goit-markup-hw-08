@@ -52,7 +52,7 @@
     letter-spacing: 0.06em;
 
     color: var(--color-button-text);
-    background: var(--color-for-hovered);
+    background: var(--color-background-button);
 
     transition-property: background, color;
     @extend %animation;
@@ -60,7 +60,7 @@
     &:focus {
         cursor: pointer;
 
-        color: var(--color-for-hovered);
+        color: var(--color-background-button);
         background: var(--color-button-text);
     }
 

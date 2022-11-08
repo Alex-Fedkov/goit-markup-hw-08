@@ -1,3 +1,12 @@
+.skill-list__head {
+text-transform: uppercase;
+text-align: center;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+}
+
 /* иконки на Наші особливості */
 .skill-list__img {
     display: flex;
@@ -26,14 +35,26 @@
 .skill-list {
     gap: 30px;
 
+    & li:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
+
+        & li:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }        
     }
 
     @media screen and (min-width: 1200px) {
         display: flex;
         flex-wrap: nowrap;
+
+        & li:nth-last-child(-n+4) {
+            margin-bottom: 0;
+        }
     }
 
 }

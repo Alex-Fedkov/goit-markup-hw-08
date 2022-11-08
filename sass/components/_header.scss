@@ -1,4 +1,8 @@
 /*расстановка навигации*/
+header {
+    border-bottom: 1px solid #ececec;
+}
+
 .head__container {
     display: flex;
     flex-direction: row;
@@ -38,8 +42,23 @@
     padding-bottom: 32px;
 }
 
+.nav__studio {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .connection {
     display: none;
+
+    @media screen and (max-width: 767px) {
+        & .mail {
+            padding: 0px;
+        }
+
+        & .telefon {
+            padding: 0px;
+        }
+    }
   
     @media screen and (min-width: 768px) {
         display: flex;
@@ -47,8 +66,23 @@
         margin-left: auto;
     }
 
+    @media screen and (max-width: 1199px) {
+        & .mail {
+            padding-top: 20px;
+        }
+        
+        & .telefon {
+            padding-bottom: 20px;
+        }
+    }       
+
     @media screen and (min-width: 1200px) {
         flex-direction: row;
+
+        & a {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
     }
 }
 
@@ -113,7 +147,7 @@
     margin-right: 10px;
 }
 
-.nav__link .current {
+.nav__link.current {
     color: var(--color-for-hovered);
 }
 
@@ -181,6 +215,7 @@
     border: none;
     z-index: 15;
     fill: #000000;
+    
 
         transition-property: fill;
         @extend %animation;
@@ -213,17 +248,22 @@
 }
 
 .head__container.is-open {
-    position: absolute;
+    // position: absolute;
     padding: 48px 40px;
     top: 0;
     align-items: flex-start;
     flex-direction: column;
+    overflow: auto;
     height: 100%;
     width: 100%;
-    min-width: 480px;
-    max-width: 767px;
+    position: fixed;
+    // min-width: 480px;
+    // max-width: 767px;
     background-color: var(--color-button-text);
     z-index: 10;
+    transition-duration: 250ms;
+    transition-timing-function: var(--transition-timing);
+
 
     .nav__studio {
             display: none;
@@ -267,7 +307,10 @@
                 color: var(--color-for-title);
 
                 transition-property: color;
+                transition-duration: 250ms;
+                transition-timing-function: var(--transition-timing);
 
+          
                 &:hover, 
                 &:focus {
                     color: var(--color-for-hovered);
@@ -292,7 +335,9 @@
 
         .nav__social-link {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
+
             width: 100%;
 
             font-weight: 500;
@@ -318,6 +363,8 @@
 }
 
 .mob-menu-tel {
+    @extend %animation;
+
     @media screen and (max-width: 767px) {
         font-weight: 500;
         font-size: 34px;
@@ -328,6 +375,8 @@
         margin-bottom: 32px;
 
         transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: var(--transition-timing);
 
         &:hover,
         &:focus {
@@ -337,6 +386,8 @@
 }
 
 .mob-menu-mal {
+    @extend %animation;
+
     @media screen and (max-width: 767px) {
         font-weight: 500;
         font-size: 24px;
@@ -346,7 +397,9 @@
     
         margin-bottom: 64px;
 
-    transition-property: color;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: var(--transition-timing);
 
         &:hover,
         &:focus {

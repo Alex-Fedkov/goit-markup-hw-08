@@ -3,31 +3,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
+    gap: 30px;
 }
 
 .our-clients-list li {
     // display: inline-block;
 
     @media screen and (min-width: 480px) {
-        width: calc((100% - (15px * 2))/2);
-        margin-bottom: 30px;
+        width: calc((100% - (15px * 2 * 2))/2);
+        // margin-bottom: 30px;
     }
    
-   
-   
     @media screen and (max-width: 480px) {
-        width: calc((100% - (15px * 2))/2);
-        margin-bottom: 30px;
+        width: calc((100% - (15px * 2 * 2))/2);
     }
 
     @media screen and (min-width: 768px) {
-        width: calc((100% - (15px * 3 ))/3);
-        margin-bottom: 30px;
+        width: calc((100% - (15px * 3 * 2 ))/3);
     }
     
     @media screen and (min-width: 1200px) {
-        width: calc((100% - (15px * 6 ))/6);
-        margin-bottom: 0px;
+        width: calc((100% - (15px * 6 * 2))/6);
     }
 }
 

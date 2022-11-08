@@ -28,7 +28,7 @@
         </nav>
         <ul class="list connection">
           <li>
-            <a href="maito:info@devstudio.com" class="connection__mail-and-tel">
+            <a href="maito:info@devstudio.com" class="connection__mail-and-tel mail">
               <svg width="16" height="12">
                 <use href="./images/sprite.svg#mail"></use>
               </svg>
@@ -36,7 +36,7 @@
             >
           </li>
           <li>
-            <a href="tel:+380961111111" class="connection__mail-and-tel">
+            <a href="tel:+380961111111" class="connection__mail-and-tel telefon">
               <svg width="10" height="16">
                 <use href="./images/sprite.svg#smartphone"></use>
               </svg>
@@ -96,8 +96,10 @@
                   <use href="./images/sprite.svg#antena"></use>
                 </svg>
               </div>
-              <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
-              <p>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+              <h3 class="skill-list__head">увага до деталей</h3>
+              <p class="skill-list__text">
+                Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
+              </p>
             </li>
             <li class="skill-list__item">
               <div class="skill-list__img">
@@ -105,8 +107,8 @@
                   <use href="./images/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <h3>ПУНКТУАЛЬНІСТЬ</h3>
-              <p>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+              <h3 class="skill-list__head">пунктуальність</h3>
+              <p class="skill-list__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
             </li>
             <li class="skill-list__item">
               <div class="skill-list__img">
@@ -114,8 +116,8 @@
                   <use href="./images/sprite.svg#diagram"></use>
                 </svg>
               </div>
-              <h3>ПЛАНУВАННЯ</h3>
-              <p>Так само консультація з широким активом значною мірою зумовлює.</p>
+              <h3 class="skill-list__head">планування</h3>
+              <p class="skill-list__text">Так само консультація з широким активом значною мірою зумовлює.</p>
             </li>
             <li class="skill-list__item">
               <div class="skill-list__img">
@@ -123,8 +125,8 @@
                   <use href="./images/sprite.svg#astronaut"></use>
                 </svg>
               </div>
-              <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-              <p>Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+              <h3 class="skill-list__head">сучасні технології</h3>
+              <p class="skill-list__text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
             </li>
           </ul>
         </div>
@@ -408,54 +410,56 @@
     <!-- футер -->
     <footer>
       <div class="container footer">
-        <div class="logo-adress">
-          <div class="logo">
-            <a href="/" class="studio-footer"><span class="nav__web">Web</span><span>Studio</span></a>
+        <div class="adress-social">
+          <div class="logo-adress">
+            <div class="logo">
+              <a href="/" class="studio-footer"><span class="nav__web">Web</span><span>Studio</span></a>
+            </div>
+            <address>
+              <ul class="list footer-adress">
+                <li>
+                  <a href="https://goo.gl/maps/N4kcenjZG2sNvHRF8" class="adress">м. Київ, пр-т Лесі Українки, 26</a>
+                </li>
+                <li><a href="maito:info@devstudio.com" class="footer-link">info@devstudio.com</a></li>
+                <li><a href="tel:+380961111111" class="footer-link">+38 096 111 11 11</a></li>
+              </ul>
+            </address>
           </div>
-          <address>
-            <ul class="list footer-adress">
-              <li>
-                <a href="https://goo.gl/maps/N4kcenjZG2sNvHRF8" class="adress">м. Київ, пр-т Лесі Українки, 26</a>
-              </li>
-              <li><a href="maito:info@devstudio.com" class="footer-link">info@devstudio.com</a></li>
-              <li><a href="tel:+380961111111" class="footer-link">+38 096 111 11 11</a></li>
-            </ul>
-          </address>
-        </div>
 
-        <!-- соц. ссылки -->
-        <div class="fotter-social">
-          <b>приєднуйтесь</b>
-          <ul class="list social-link-footer">
-            <li>
-              <a href="" aria-label="ссылка на Instagram">
-                <svg width="20" height="20">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" aria-label="ссылка на Twitter">
-                <svg width="20" height="20">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" aria-label="ссылка на Facebook">
-                <svg width="20" height="20">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" aria-label="ссылка на LinkedIn">
-                <svg width="20" height="20">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <!-- соц. ссылки -->
+          <div class="fotter-social">
+            <b>приєднуйтесь</b>
+            <ul class="list social-link-footer">
+              <li>
+                <a href="" aria-label="ссылка на Instagram">
+                  <svg width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" aria-label="ссылка на Twitter">
+                  <svg width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" aria-label="ссылка на Facebook">
+                  <svg width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" aria-label="ссылка на LinkedIn">
+                  <svg width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- форма подписаться -->
         <form class="email-input">
