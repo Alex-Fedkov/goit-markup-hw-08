@@ -6,9 +6,24 @@
     justify-content: center;
 }
 
-.ul-button li:not(:last-child) {
-    margin-right: 8px;
-    margin-bottom: 50px;
+.ul-button li {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 40px;
+    }
+
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
 }
 
 .button-filtr {
@@ -30,6 +45,7 @@
 
     transition-property: background, color;
     @extend %animation;
+
     &:hover,
     &:focus {
         cursor: pointer;
